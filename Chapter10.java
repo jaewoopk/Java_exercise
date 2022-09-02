@@ -8,7 +8,7 @@ class Accumulator {
     }
     
     static void showResult() {
-        System.out.println(sum);
+        System.out.println("sum = " + sum);
     }
 }
 
