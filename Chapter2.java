@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Chapter2 {
     public static void main(String[] args) {
         char japan1 = 0x3041;

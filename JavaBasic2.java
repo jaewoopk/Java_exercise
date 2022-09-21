@@ -17,12 +17,12 @@ public class JavaBasic2 {
             System.out.println("for count = " + count);
         }
         
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        String str = sc.nextLine();
-        str = sc.nextLine();
+        // Scanner sc = new Scanner(System.in);
+        // int t = sc.nextInt();
+        // String str = sc.nextLine();
+        // str = sc.nextLine();
         
-        System.out.println(t + " " + str);
+        // System.out.println(t + " " + str);
 
         for (int i = 0, j = 10; i < 10; i++, j += 2) {
             System.out.println("i = " + i + "," + "j = " + j);
@@ -43,6 +43,19 @@ public class JavaBasic2 {
         for (int value : brr) { // for - each 문에서 배열의 크기가 달라지면 위험
             System.out.println("brr["+ value / 2 +"]= " + value);
         }
-        sc.close();
+
+        int[][] array = new int[10][];
+
+        for (int i = 0; i < array.length; i++) { // 이게 됨
+            array[i] = new int[i + 1]; // 비 정방행렬 가능 (이건 좀 개꿀팁인듯)
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = i * j;
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println("");
+        }
+        //sc.close();
     }
 }

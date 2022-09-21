@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Chapter5 {
     public static void main(String[] args) {
         int n = 24;
