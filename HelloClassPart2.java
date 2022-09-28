@@ -56,12 +56,13 @@ class Point {
 public class HelloClassPart2 {
     static final int T = 10;
     public static void main(String[] args) {
+        Chapter1.main(args); // 와 이게 되네
         Point a = new Point();
         a.print();
         Point b = new Point(3.3f , 5.2f);
         b.print();
-        
-        Point.maxx = 1000.0f;
+
+        Point.maxx = 1000.0f; // static은 이게 됨
 
         a.increase(b);
         System.out.println("----");
