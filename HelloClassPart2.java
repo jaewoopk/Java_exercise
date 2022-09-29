@@ -56,7 +56,7 @@ class Point {
 public class HelloClassPart2 {
     static final int T = 10;
     public static void main(String[] args) {
-        Chapter1.main(args); // 와 이게 되네
+        Chapter1.main(args); // 와 이게 되네 -> main은 public static void 이니까 다른 클래스에서도 같은 package라면 쓸 수 있는 듯
         Point a = new Point();
         a.print();
         Point b = new Point(3.3f , 5.2f);
