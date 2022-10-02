@@ -71,6 +71,7 @@ public class HelloClassPart2 {
         a.setX(newX);
         a.print();
         a.setX(newY);
+		a.getLength2();
         a.print();
         System.out.println(newX);
 
