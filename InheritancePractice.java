@@ -13,7 +13,7 @@ class MyString {
 
 
 class MyColorString extends MyString{
-    String color;
+    public String color;
     MyColorString() {
         super("hello");
         color = "black";
@@ -33,7 +33,9 @@ class MySimplestClass {
 
 public class InheritancePractice {
     static void function(Object in) {
-
+        if (in instanceof MyColorString) {
+            System.out.println(in.getClass());
+        }
     }
     public static void main(String[] args) {
         // StaticTest a = new StaticTest();
@@ -55,9 +57,10 @@ public class InheritancePractice {
         System.out.println(simple.hashCode());
 
         MyString c = abc;
+        function(abc);
 
         MyColorString d = (MyColorString)c; // 부모인척하는 자식일 때
-        
+
     }
 }
 
