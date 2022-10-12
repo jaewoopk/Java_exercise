@@ -56,10 +56,10 @@ public class InheritancePractice {
         MySimplestClass simple = new MySimplestClass();
         System.out.println(simple.hashCode());
 
-        MyString c = abc;
-        function(abc);
+        //MyString c = abc;
+        //function(abc);
 
-        MyColorString d = (MyColorString)c; // 부모인척하는 자식일 때
+        //MyColorString d = (MyColorString)c; // 부모인척하는 자식일 때
 
     }
 }
