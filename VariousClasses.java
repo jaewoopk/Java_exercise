@@ -2,6 +2,14 @@ interface Loggable {
     abstract public void print();
 }
 
+interface Countable {
+    int getNumber();
+}
+
+interface Judgeable {
+    boolean judge(int n);
+}
+
 class Header implements Loggable {
     public void print() {
         System.out.println("Start!!---");
@@ -55,10 +63,36 @@ public class VariousClasses {
         f.print();
     }
     public static void main(String[] args) {
+
+        Countable c1 = new Countable() {
+            public int getNumber() {
+                return 100;
+            }
+        };
+        // c1과 c2는 같음
+        Countable c2 = () -> 100;
+        Judgeable j = (n) -> ((n % 2) == 0);
+        Countable c3 = () -> (int)(Math.random() * 100);
+
+        System.out.println(c1.getNumber());
+        System.out.println(c2.getNumber());
+        System.out.println(c3.getNumber());
+        System.out.println(j.judge(51));
         //AnonymousTest a = new AnonymousTest();
         //a.print();
         Header h = new Header();
         Footer f = new Footer();
         print(h, "Sejong Univ.", f);
+
+        /*print(new Loggable()) {
+            public void print() {
+                System.out.println("Test!!");
+            }
+        }*/
+
+        Loggable a = () -> {
+            System.out.println("End!!!");
+            
+        };
     }
 }
