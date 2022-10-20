@@ -40,31 +40,31 @@ public class ExecptionHandling {
             System.out.println(e.getMessage());
         }
 
-    //     int x = 20;
-    //     int y = 0;
-    //     int z;
-    //     try {
-    //         //            z = x/y;
+        int x = 20;
+        int y = 0;
+        int z;
+        try {
+            //            z = x/y;
             
-    //         int [] a = new int[10];
-    //         a[10] = 100;
+            int [] a = new int[10];
+            a[10] = 100;
             
-    //     }
-    //     catch (ArithmeticException e){
-    //     z = 100000000;
-    // }
-    //     catch (ArrayIndexOutOfBoundsException e) {
-    //         System.out.println("Oppsssssss");
-    //     }
-    //     //System.out.println(z);
-    //     // int [] a = new int [10];
-    //     // a[10] = 100;
+        }
+        catch (ArithmeticException e){
+        z = 100000000;
+    }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Oppsssssss");
+        }
+        //System.out.println(z);
+        // int [] a = new int [10];
+        // a[10] = 100;
 
-    //     // TestClass [] arr = new TestClass[10];
-    //     // for (int i = 0; i < 10; i++) {
-    //     //     arr[i] = new TestClass();
-    //     // }
+        // TestClass [] arr = new TestClass[10];
+        // for (int i = 0; i < 10; i++) {
+        //     arr[i] = new TestClass();
+        // }
 
-    //     // arr[0].y = 10;
+        // arr[0].y = 10;
     }
 }
