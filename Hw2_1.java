@@ -4,7 +4,7 @@ class MakingReservation {
     String []sSeat = new String[10];
     String []aSeat = new String[10];
     String []bSeat = new String[10];
-
+    
     MakingReservation() {
         for (int i = 0; i < 10; i++) {
             sSeat[i] = "---";
