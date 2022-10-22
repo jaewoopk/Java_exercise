@@ -59,7 +59,7 @@ class Dictionary extends PairMap {
             }
         }
         tmp = valueArray[findIndex];
-        for (int i = keyArray.length - 2; i >= findIndex; i--) {
+        for (int i = findIndex; i < keyArray.length - 1; i++) {
             keyArray[i] = keyArray[i + 1];
             valueArray[i] = valueArray[i + 1];
         }

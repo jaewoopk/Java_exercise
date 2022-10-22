@@ -1,6 +1,6 @@
 public class Chapter9 {
     public static void main(String[] args) {
-        Circle c = new Circle(1.5);
+        LCircle c = new LCircle(1.5);
         System.out.println("반지름 : " + c.getRad());
         System.out.println("넓 이 : " + c.getArea());
 
@@ -18,11 +18,11 @@ public class Chapter9 {
     }
 }
 
-class Circle {
+class LCircle {
     private double rad = 0;
     final double PI = 3.14;
 
-    public Circle(double r) {
+    public LCircle(double r) {
         setRad(r);
     }
 

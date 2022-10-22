@@ -1,8 +1,8 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 abstract class Shape {
     private Shape next;
+    
     public Shape() {
         next = null;
     }
@@ -17,9 +17,8 @@ abstract class Shape {
 
 class Line extends Shape{
 
-    Line() {
-        super();
-    }
+    // public Line() {
+    // }
     @Override
     public void draw() {
         // TODO Auto-generated method stub
@@ -30,9 +29,8 @@ class Line extends Shape{
 
 class Rect extends Shape{
     
-    Rect() {
-        super();
-    }
+    // public Rect() {
+    // }
     @Override
     public void draw() {
         // TODO Auto-generated method stub
@@ -43,9 +41,8 @@ class Rect extends Shape{
 
 class Circle extends Shape{
 
-    Circle() {
-        super();
-    }
+    // public Circle() {
+    // }
     @Override
     public void draw() {
         // TODO Auto-generated method stub
@@ -55,6 +52,15 @@ class Circle extends Shape{
 }
 
 class GraphicEditor{
+    Shape head, last;
+    int size;
+
+    GraphicEditor() {
+        head = null;
+        last = null;
+        size = 0;
+    }
+
     public void insert() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Line(1), Rect(2), Circle(3)>>");
@@ -62,23 +68,83 @@ class GraphicEditor{
         int chooseNum = sc.nextInt();
         switch(chooseNum) {
         case 1 :
-            
+            if (head == null) {
+                Shape node;
+                node = (Shape)(new Line());
+                head = node;
+                last = node;
+            }
+            else {
+                Shape node;
+                node = (Shape)(new Line());
+                last.setNext(node);
+                last = node;
+            }
+            size++;
             break ;
         case 2 :
-            
+            if (head == null) {
+                Shape node;
+                node = (Shape)(new Rect());
+                head = node;
+                last = node;
+            }
+            else {
+                Shape node;
+                node = (Shape)(new Rect());
+                last.setNext(node);
+                last = node;
+            }
+            size++;
             break ;
         case 3 :
-            
+            if (head == null) {
+                Shape node;
+                node = (Shape)(new Circle());
+                head = node;
+                last = node;
+            }
+            else {
+                Shape node;
+                node = (Shape)(new Circle());
+                last.setNext(node);
+                last = node;
+            }
+            size++;
             break ;
         }
     }
 
     public void delete() {
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("삭제할 도형의 위치>>");
+        int select = sc.nextInt();
+
+        if (select <= 0 || select > size || size <= 0) {
+            System.out.println("삭제할 수 없습니다.");
+            return ;
+        }
+
+        Shape node = head;
+        if (select == 1) {
+            head = node.getNext();
+            size--;
+            return ;
+        }
+        for (int i = 0; i < select - 2; i++) {
+            node = node.getNext();
+        }
+        node.setNext(node.getNext().getNext());
+        size--;
     }
 
     public void showAll() {
-      
+        Shape node = head;
+        for (int i = 0; i < size; i++) {
+            node.draw();
+            node = node.getNext();
+        }
     }
 
     public boolean endBeauty() {
