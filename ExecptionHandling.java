@@ -29,32 +29,30 @@ public class ExecptionHandling {
         return (0.0f);
     }
     public static void main(String[] args) {
+        // try {
+        //     func(-10);
+        //     func2(10000);
+        // }
+        // catch (MyPositiveException e){
+        //     System.out.println(e.getMessage());
+        // }
+        // catch (MyTooBigException e) {
+        //     System.out.println(e.getMessage());
+        // }
+
         try {
             //func(-10);
-            func2(10000);
-        }
-        catch (MyPositiveException e){
-            System.out.println(e.getMessage());
-        }
-        catch (MyTooBigException e) {
-            System.out.println(e.getMessage());
-        }
-
-        int x = 20;
-        int y = 0;
-        int z;
-        try {
-            //            z = x/y;
+            int x = 20;
+            int y = 0;
+            int z = x / y;
             
-            int [] a = new int[10];
-            a[10] = 100;
             
         }
         catch (ArithmeticException e){
-        z = 100000000;
-    }
-        catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Oppsssssss");
+            System.out.println("나누기 예외발생");
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         //System.out.println(z);
         // int [] a = new int [10];

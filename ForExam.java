@@ -20,21 +20,33 @@ import java.util.Iterator;
 // }
 
 public class ForExam {
-    public static void main(String[] args) {
-        ArrayList<String> arr = new ArrayList<String>();
+//     static void func(Object o) {
+//         if (o instanceof Integer) {
+//             System.out.println("정수입력: " + o);
+//         }
+//         if (o instanceof String) {
+//             System.out.println("문자열입력: " + o);
+//         }
+//     }
+    public static void main(String[] args) throws Exception{
+        ForExam test = new ForExam();
+        test.throwException(13);
+        // func(10);
+        // func("Sejong");
+        // ArrayList<String> arr = new ArrayList<String>();
 
-        arr.add("a");
-        arr.add("b");
-        arr.add("c");
+        // arr.add("a");
+        // arr.add("b");
+        // arr.add("c");
 
-        for (Iterator<String> str = arr.iterator(); str.hasNext();) {
-            if (str.next().equals("a")) {
-                str.remove();
-            }
-        }
-        for (String str : arr) {
-            System.out.println(str);
-        }
+        // for (Iterator<String> str = arr.iterator(); str.hasNext();) {
+        //     if (str.next().equals("a")) {
+        //         str.remove();
+        //     }
+        // }
+        // for (String str : arr) {
+        //     System.out.println(str);
+        // }
         // int a = 3;
         // int b = 4;
         // int c = 5;
@@ -58,5 +70,11 @@ public class ForExam {
         //     System.out.println(e.name);
         // }
 
+    }
+    public void throwException(int num) throws Exception {
+        if (num > 12) {
+            throw new Exception("Number is over than 12");
+        }
+        System.out.println("number is = " + num);
     }
 }
