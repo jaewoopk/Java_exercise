@@ -15,8 +15,6 @@ public class Hw3_1 extends JFrame{
         for (int i = 0; i < 10; i++) {
             but[i] = new JButton(but_name[i]);
             but[i].setBackground(but_color[i]);
-            but[i].setOpaque(true);
-            but[i].setBorderPainted(false);
             add(but[i]);
         }
         setSize(600, 200);
