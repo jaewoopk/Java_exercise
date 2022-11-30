@@ -11,38 +11,20 @@ import java.awt.Shape;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-
-class Hw4Panel extends JPanel {
-    final static String[][] str = {{"7", "8", "9", "c"},
-                                 {"4", "5", "6", "+"},
-                                 {"3", "2", "1", "-"},
-                                 {"0", " ", " ", "="}};
+class Hw4ViewPanel extends JPanel {
     ArrayList<Shape> rect = new ArrayList<>();
-    Hw4Panel() {
-	
+    Hw4ViewPanel() {
+        add(new JLabel("hello"));
+        add(new JTextField("16"));
         rect.add(new Rectangle2D.Float(70,0,340,150));
         rect.add(new Rectangle2D.Float(90,18,300,115));
-        JButton[][] but = new JButton[4][4];
-        
-        GridBagConstraints[][] gbc = new GridBagConstraints[4][4];
-        GridBagLayout gbl = new GridBagLayout();
-        setLayout(gbl);
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                but[i][j] = new JButton(str[i][j]);
-                gbc[i][j] = new GridBagConstraints();
-            }
-        }
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                gbc[i][j].gridx = j;
-                gbc[i][j].gridy = i;
-                add(but[i][j],gbc[i][j]);
-            }
-        }
+        setLayout(new FlowLayout());
     }
+
     @Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);	
@@ -63,7 +45,7 @@ class Hw4Panel extends JPanel {
 				            (0,0, Color.GRAY, 350,350, Color.DARK_GRAY);
 		
         GradientPaint gp2 = new GradientPaint
-	    		            (0,0, Color.BLACK, 350,350, Color.BLUE);
+	    		            (0,0, Color.DARK_GRAY, 350,350, Color.BLUE);
 		g2.setPaint(gp);
         g3.setPaint(gp2);
         g2.fill(rect.get(0));
@@ -71,11 +53,28 @@ class Hw4Panel extends JPanel {
 	}
 }
 
+class Hw4ButtonPanel extends JPanel {
+    final static String[][] str = {{"7", "8", "9", "c"},
+                                 {"4", "5", "6", "+"},
+                                 {"3", "2", "1", "-"},
+                                 {"0", " ", " ", "="}};
+    Hw4ButtonPanel() {
+        JButton[][] but = new JButton[4][4];
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                but[i][j] = new JButton(str[i][j]);
+                add(but[i][j]);
+            }
+        }
+        setLayout(new GridLayout(4,4,2,2));
+    }
+}
+
 
 public class JavaHW4 extends JFrame{
     JavaHW4() {
         setTitle("Homework2");
-        add(new Hw4Panel());
+        add(new Hw4ButtonPanel());
         setSize(500, 500);
         setVisible(true);
         setResizable(true);
