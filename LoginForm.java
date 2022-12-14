@@ -77,6 +77,7 @@ public class LoginForm extends JFrame implements ActionListener {
  
 
  @Override
+ @Deprecated
  public void actionPerformed(ActionEvent ae) {
   Object o=ae.getSource();
   /* 어떤 클래스로 받아야 할 지 모를때
@@ -90,7 +91,6 @@ public class LoginForm extends JFrame implements ActionListener {
    /* 로컬변수 db_id와 db_pwd가 문자값 1로 코딩내부적으로 정의되었고,
 
 id와 password에 1을 입력해야지만 참이 나온다. */
-
    if(db_id.equals( id.getText().trim() ) && db_pwd.equals(password.getText().trim()) ){
 
 // trim() : 문자열에 존재하는 space를 제거.

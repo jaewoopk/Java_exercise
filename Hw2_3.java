@@ -113,6 +113,7 @@ class GraphicEditor{
             size++;
             break ;
         }
+        sc.close();
     }
 
     public void delete() {
@@ -123,6 +124,7 @@ class GraphicEditor{
 
         if (select <= 0 || select > size || size <= 0) {
             System.out.println("삭제할 수 없습니다.");
+            sc.close();
             return ;
         }
 
@@ -130,6 +132,7 @@ class GraphicEditor{
         if (select == 1) {
             head = node.getNext();
             size--;
+            sc.close();
             return ;
         }
         for (int i = 0; i < select - 2; i++) {
@@ -137,6 +140,7 @@ class GraphicEditor{
         }
         node.setNext(node.getNext().getNext());
         size--;
+        sc.close();
     }
 
     public void showAll() {
@@ -171,7 +175,7 @@ class GraphicEditor{
             checking = endBeauty();
             break ;
         }
-
+        sc.close();
         return checking;
     }
 

@@ -1,5 +1,5 @@
 package gunja;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Hello {
     static int sum(int [] arr) {

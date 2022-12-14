@@ -42,9 +42,9 @@ public class ExecptionHandling {
 
         try {
             //func(-10);
-            int x = 20;
-            int y = 0;
-            int z = x / y;
+            // int x = 20;
+            // int y = 0;
+            // int z = x / y;
             
             
         }

@@ -103,7 +103,7 @@ class MyNewBoiler extends MyOldBoiler implements RemoteControlable{
     }
 }
 
-class MyIntData implements Comparable{
+class MyIntData implements Comparable<Object>{
     int value;
 
     MyIntData(int in) {
@@ -153,5 +153,6 @@ public class InterfaceTest {
         for (MyIntData e : data) {
             System.out.println(e.value);
         }
+
     }
 }

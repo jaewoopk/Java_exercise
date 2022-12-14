@@ -1,10 +1,10 @@
-import java.util.Vector;
+// import java.util.Vector;
 
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
-import java.util.ArrayList;
-import java.util.Collection;
+// import java.util.ArrayList;
+// import java.util.Collection;
 import java.util.Collections;
 
 public class GenericPractice {

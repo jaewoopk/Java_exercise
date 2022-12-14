@@ -35,6 +35,8 @@ class MyTriangle {
 
     float maxx = 100.0f;
     float minx = 0.0f;
+    float maxy = 50.0f;
+    float miny = 5.0f;
     private class Point {
         float x, y;
     
@@ -46,6 +48,10 @@ class MyTriangle {
             x = _x;
             if (x > maxx) x = maxx;
             if (x < minx) x = minx;
+
+            if (y > maxy) y = maxy;
+            if (y < miny) y = miny;
+
             y = _y;
         }
     }
@@ -90,9 +96,9 @@ public class VariousClasses {
             }
         }*/
 
-        Loggable a = () -> {
-            System.out.println("End!!!");
+        // Loggable a = () -> {
+        //     System.out.println("End!!!");
             
-        };
+        // };
     }
 }

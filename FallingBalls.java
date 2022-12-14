@@ -45,8 +45,6 @@ class MyFallingBall {
 				   (int)(radius*2), (int)(radius*2));
 	}
 	void update(float dt) {
-		ax = ax;
-		ay = ay;
 		
 		vx += ax*dt;
 		vy += ay*dt;

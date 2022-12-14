@@ -1,11 +1,10 @@
-import java.awt.Color;
+//import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 
 import javax.swing.JButton;
-import javax.swing.JColorChooser;
+//import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -122,7 +121,7 @@ public class MoreComponentPractice extends JFrame
 		switch(e.getActionCommand()) {
 		case "Open1":
 			
-			MyDialog dlg = new MyDialog(this);
+			//MyDialog dlg = new MyDialog(this);
 			
 			break;
 		case "Open2":
@@ -144,8 +143,8 @@ public class MoreComponentPractice extends JFrame
 			
 		case "Color":
 			
-			Color color = JColorChooser.showDialog(this, "select Color", 
-					Color.yellow);
+			// Color color = JColorChooser.showDialog(this, "select Color", 
+			// 		Color.yellow);
 
 			
 			break;

@@ -49,7 +49,7 @@ public class Hello {
         String str = "str" + c;
         System.out.println(str);
         System.out.println(c.toString());
-        System.out.println(c.equals(str));
+        // System.out.println(c.equals(str));
         System.out.println(str.hashCode());
         System.out.println(str.compareTo("strsejong.Test@7d"));
         System.out.println(str.compareTo("strsejong.Test@7d3"));
@@ -64,7 +64,7 @@ public class Hello {
 
         int aaa1 = 100;
         //Integer aaa2 = new Integer(aaa1); -> 이게 안됨
-        Integer aaa3 = Integer.valueOf(aaa1);
+        // Integer aaa3 = Integer.valueOf(aaa1);
         Integer aaa4 = aaa1; //-> 위에부터 int를 Integer로 == Boxing
 
         int aaa5 = aaa4.intValue(); // -> unBoxing

@@ -67,6 +67,7 @@ class MakingReservation {
             }
             break ;
         }
+        sc.close();
     }
 
     public void lookUp() {
@@ -152,6 +153,7 @@ class MakingReservation {
             }
             break ;
         }
+        sc.close();
     }
 
     public boolean endReservation() {
@@ -178,7 +180,7 @@ class MakingReservation {
             checking = endReservation();
             break ;
         }
-
+        sc.close();
         return checking;
     }
 }
